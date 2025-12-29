@@ -1,18 +1,31 @@
 // config/siteConfig.js
 export const siteConfig = {
-  siteName: 'Bigwood Bathrooms & Kitchens',
+  siteName: 'Custom Carpentry',
   logo: {
-    text: 'Bigwood Bathrooms & Kitchens',
-    src: '/logo/bigwood-logo.png',
-    alt: 'Bigwood Bathrooms & Kitchens Logo',
+    text: 'Custom Carpentry',
+    src: '/logo/logo_new.png',
+    alt: 'Custom Carpentry Logo',
     height: 50,
   },
   metadata: {
     base: {
-      title: 'Bigwood Bathrooms & Kitchens – Quality Bathrooms, Kitchens & Tiling',
+      title: 'Custom Carpentry – Bespoke Carpentry in North West London & Chilterns',
       description:
-        'Professional bathroom fitting, kitchen installation, and tiling services. Quality craftsmanship with attention to detail. Serving the local area and surroundings.',
-      icons: { icon: '/favicon.ico' },
+        'With over 40 years of combined experience in bespoke carpentry, Custom Carpentry delivers high-quality craftsmanship for both residential and commercial clients across North West London and the surrounding areas.',
+      icons: {
+        icon: [
+          { url: '/logo/icons/favicon.ico' },
+          { url: '/logo/icons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+          { url: '/logo/icons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        ],
+        apple: [
+          { url: '/logo/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+        ],
+        other: [
+          { rel: 'icon', url: '/logo/icons/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+          { rel: 'icon', url: '/logo/icons/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+        ],
+      },
     },
   },
 
@@ -24,25 +37,27 @@ export const siteConfig = {
     google: { base: 'Open Sans', heading: 'Playfair Display', accent: 'Open Sans' },
   },
 
-  // Warm professional color scheme
+  // Custom Carpentry color scheme
   brand: {
-    primary: '#B8860B', // warm copper/bronze
-    secondary: '#2D2D2D', // dark charcoal
-    accent: '#F5F0E8', // warm tan/beige
+    primary: '#089DC0', // blue from logo
+    secondary: '#1E1E1E', // dark charcoal from logo
+    accent: '#E8F4F8', // subtle blue tint
+    accentGray: '#F5F5F5', // light gray
     background: '#FFFFFF', // clean white
-    dark: '#333333', // dark gray text
+    dark: '#1E1E1E', // dark charcoal text
   },
 
   styles: {
     bgLight: 'bg-white',
-    bgPrimary: 'bg-[#B8860B]',
-    bgSecondary: 'bg-[#2D2D2D]',
-    bgAccent: 'bg-[#F5F0E8]',
-    textPrimary: 'text-[#333333]',
+    bgPrimary: 'bg-[#089DC0]',
+    bgSecondary: 'bg-[#1E1E1E]',
+    bgAccent: 'bg-[#E8F4F8]',
+    bgAccentGray: 'bg-[#F5F5F5]',
+    textPrimary: 'text-[#1E1E1E]',
     textMuted: 'text-[#666666]',
     textLight: 'text-white',
-    borderLight: 'border-[#F5F0E8]',
-    borderDark: 'border-[#B8860B]',
+    borderLight: 'border-[#E8F4F8]',
+    borderDark: 'border-[#089DC0]',
   },
 
   banner: {
@@ -53,118 +68,252 @@ export const siteConfig = {
     links: [
       { label: 'Home', href: '/' },
       { label: 'About', href: '/about' },
+      { label: 'Updates', href: '/updates' },
+      { label: 'Portfolio', href: '/portfolio' },
       { label: 'Services', href: '/services' },
+      { label: 'Testimonials', href: '/testimonials' },
       { label: 'Contact', href: '/contact' },
     ],
   },
 
   footer: {
-    copyright: 'Bigwood Bathrooms & Kitchens',
+    copyright: 'Custom Carpentry',
     nav: [
       { label: 'Home', href: '/' },
       { label: 'About', href: '/about' },
+      { label: 'Updates', href: '/updates' },
+      { label: 'Portfolio', href: '/portfolio' },
       { label: 'Services', href: '/services' },
+      { label: 'Testimonials', href: '/testimonials' },
       { label: 'Contact', href: '/contact' },
     ],
     social: {
-      instagram: '',
-      facebook: '',
-      linkedin: '',
-      twitter: '',
-      tiktok: '',
-      youtube: '',
-      tripadvisor: '',
+      instagram: 'https://www.instagram.com/customcarpentryuk',
+      facebook: 'https://www.facebook.com/CustomCarpentryLdn/',
+      whatsapp: 'https://wa.link/hl8w8b',
+      email: 'mailto:info@custom-carpentry.co.uk',
+      phone: 'tel:+447833797963',
     },
+    locations: [
+      {
+        name: 'London',
+        address: 'Malvern Court, Oakleigh Road North',
+        city: 'London, N20 0TF',
+        phone: '+44 7833 797 963',
+      },
+      {
+        name: 'Chilterns',
+        address: 'Fern Walk, Hazlemere',
+        city: 'High Wycombe, HP15 7RQ',
+        phone: '+44 7872 590 975',
+      },
+    ],
   },
 
   hero: {
-    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2340&auto=format&fit=crop',
-    imageAlt: 'Modern luxury bathroom with elegant fixtures',
-    heading: 'Quality Bathrooms, Kitchens & Tiling',
-    subheading: 'Transforming your home with expert craftsmanship',
-    ctaText: 'Get a Quote',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2340&auto=format&fit=crop',
+    imageAlt: 'Bespoke carpentry workshop with custom woodwork',
+    heading: 'Bespoke Carpentry',
+    subheading: 'With over 40 years of combined experience in bespoke carpentry, Custom Carpentry delivers high-quality craftsmanship for both residential and commercial clients across North West London and the surrounding areas.',
+    additionalContent: [
+      'Whether you need a custom-built wardrobe, kitchen installation, full property renovation, or tailored woodworking solutions, we\'re here to bring your vision to life.',
+      'We specialize in made-to-measure furniture, joinery, and renovation projects — always with a focus on precision, durability, and elegant design. We\'re passionate about detail and dedicated to exceeding expectations.',
+    ],
+    ctaText: 'Contact Us',
     ctaHref: '/contact',
     secondaryCtaText: 'View Our Work',
-    secondaryCtaHref: '#projects',
+    secondaryCtaHref: '/portfolio',
   },
 
   welcome: {
-    heading: 'Welcome to Bigwood Bathrooms & Kitchens',
-    content: `We are a trusted local business specialising in high-quality bathroom installations, kitchen fitting, and professional tiling services. With years of experience in the trade, we take pride in delivering exceptional results that transform your living spaces.
-
-From complete bathroom renovations to stunning kitchen makeovers and precision tiling work, our skilled team handles every project with meticulous attention to detail. We work closely with our clients to understand their vision and bring it to life, ensuring complete satisfaction every time.`,
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop',
-    imageAlt: 'Beautiful modern kitchen installation',
+    heading: 'Contact us today to discuss your next project.',
+    content: '',
+    image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2340&auto=format&fit=crop',
+    imageAlt: 'Custom carpentry work in progress',
   },
 
   services: {
-    heading: 'Our Services',
-    subheading: 'Comprehensive solutions for your home improvement needs',
+    heading: 'Our Services Include',
+    subheading: '',
     items: [
       {
-        title: 'Bathroom Fitting',
-        description: 'Complete bathroom installations from design to completion. We handle everything including plumbing, tiling, and fixtures.',
-        icon: 'bath',
-        features: [
-          'Full bathroom design consultation',
-          'Complete installation service',
-          'Plumbing and electrical work',
-          'High-quality fixtures and fittings',
-          'Wet room installations',
-          'Accessible bathroom solutions',
-        ],
-      },
-      {
-        title: 'Kitchen Installation',
-        description: 'Professional kitchen fitting services. Transform your kitchen with our expert installation and attention to detail.',
-        icon: 'kitchen',
-        features: [
-          'Kitchen design and planning',
-          'Cabinet and worktop installation',
-          'Appliance fitting',
-          'Plumbing and electrical connections',
-          'Splashback and tiling',
-          'Complete project management',
-        ],
-      },
-      {
-        title: 'Tiling',
-        description: 'Expert wall and floor tiling for bathrooms, kitchens, and throughout your home. Precision cuts and flawless finishes.',
-        icon: 'grid',
-        features: [
-          'Wall and floor tiling',
-          'Natural stone installation',
-          'Porcelain and ceramic tiles',
-          'Mosaic and feature walls',
-          'Underfloor heating compatible',
-          'Waterproofing and tanking',
-        ],
-      },
-      {
-        title: 'Renovations',
-        description: 'Full renovation services to modernise and refresh your bathroom or kitchen. Complete transformation guaranteed.',
+        title: 'Internal and External Carpentry',
+        description: 'Complete carpentry solutions for both interior and exterior projects, from structural work to finishing touches.',
         icon: 'home',
-        features: [
-          'Complete room renovations',
-          'Structural modifications',
-          'Plumbing upgrades',
-          'Electrical rewiring',
-          'Plastering and finishing',
-          'Project coordination',
-        ],
+        features: [],
       },
       {
-        title: 'Repairs & Maintenance',
-        description: 'Quick and reliable repair services for all bathroom and kitchen issues. From leaky taps to broken tiles.',
+        title: 'Bespoke Furniture',
+        description: 'Custom-designed and handcrafted furniture tailored to your exact specifications and space requirements.',
+        icon: 'sofa',
+        features: [],
+      },
+      {
+        title: 'Full Refurbishments',
+        description: 'Comprehensive property renovation services transforming spaces from concept to completion.',
+        icon: 'hammer',
+        features: [],
+      },
+      {
+        title: 'Property Maintenance',
+        description: 'Reliable maintenance services to keep your property in perfect condition year-round.',
         icon: 'wrench',
-        features: [
-          'Tap and shower repairs',
-          'Toilet and cistern fixes',
-          'Tile replacement',
-          'Grouting and resealing',
-          'Leak detection and repair',
-          'General maintenance',
-        ],
+        features: [],
+      },
+      {
+        title: 'Finish Carpentry',
+        description: 'Expert finishing work including skirting, architraves, and all the beautiful details that complete a space.',
+        icon: 'ruler',
+        features: [],
+      },
+      {
+        title: 'Light Building Work',
+        description: 'General building services complementing our carpentry expertise for complete project solutions.',
+        icon: 'building',
+        features: [],
+      },
+      {
+        title: 'Decorating and more',
+        description: 'Professional decorating services and additional trades to deliver complete transformations.',
+        icon: 'paintbrush',
+        features: [],
+      },
+    ],
+  },
+
+  servicesPage: {
+    heading: 'Services',
+    intro: 'Whether it\'s indoor or outdoor, commercial or domestic, Custom Carpentry is here to provide all the carpentry and woodworking services you need. We thrive on finding the perfect solution for every project and embrace challenges with enthusiasm!',
+    mainServices: [
+      {
+        title: 'Shelving & Storage',
+        description: 'Custom shelving solutions designed to maximize your space and complement your interior.',
+        icon: 'shelf',
+        image: 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?q=80&w=2340&auto=format&fit=crop',
+      },
+      {
+        title: 'Wardrobes',
+        description: 'Bespoke fitted wardrobes tailored to your exact requirements and room dimensions.',
+        icon: 'wardrobe',
+        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2340&auto=format&fit=crop',
+      },
+      {
+        title: 'Panelling',
+        description: 'Elegant wall panelling to add character and sophistication to any room.',
+        icon: 'panel',
+        image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2340&auto=format&fit=crop',
+      },
+      {
+        title: 'Media Walls',
+        description: 'Custom media wall units designed to house your entertainment systems beautifully.',
+        icon: 'tv',
+        image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=2340&auto=format&fit=crop',
+      },
+      {
+        title: 'Kitchens',
+        description: 'Full kitchen installations from design through to completion.',
+        icon: 'kitchen',
+        image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop',
+      },
+      {
+        title: 'CNC Machining',
+        description: 'Precision CNC machining for complex and detailed woodworking projects.',
+        icon: 'cnc',
+        image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?q=80&w=2340&auto=format&fit=crop',
+      },
+      {
+        title: 'Property Maintenance',
+        description: 'Comprehensive maintenance services for residential and commercial properties.',
+        icon: 'maintenance',
+        image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2340&auto=format&fit=crop',
+      },
+      {
+        title: 'Full Refurbishments',
+        description: 'Complete property renovations transforming spaces from concept to completion.',
+        icon: 'refurb',
+        image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2340&auto=format&fit=crop',
+      },
+      {
+        title: 'Decking and External Woodwork',
+        description: 'Quality outdoor carpentry including decking, pergolas, and garden structures.',
+        icon: 'deck',
+        image: 'https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=2340&auto=format&fit=crop',
+      },
+    ],
+    additionalServices: [
+      'Shelving & Storage',
+      'Bedrooms',
+      'Kitchens',
+      'Bar & Shop Fitting',
+      'Laminate and Wood Flooring',
+      'Garden Sheds, Summer Houses and Gazebos',
+      'Decking',
+      'Ceilings & Roofing',
+      'Loft and Garage Conversions',
+      'Gates, Fences and Garage Doors',
+      'Skirtings and Architraves',
+      'Doors',
+    ],
+  },
+
+  portfolio: {
+    heading: 'Portfolio',
+    intro: 'Explore our categorised portfolio for inspiration! Browse through our collection of past projects to find something similar to what you have in mind.',
+    categories: [
+      {
+        title: 'Shelving & Storage',
+        image: 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?q=80&w=2340&auto=format&fit=crop',
+        slug: 'shelving-storage',
+      },
+      {
+        title: 'Wardrobes',
+        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2340&auto=format&fit=crop',
+        slug: 'wardrobes',
+      },
+      {
+        title: 'Paneling',
+        image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2340&auto=format&fit=crop',
+        slug: 'paneling',
+      },
+      {
+        title: 'Kitchens',
+        image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop',
+        slug: 'kitchens',
+      },
+      {
+        title: 'Refurbishments',
+        image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2340&auto=format&fit=crop',
+        slug: 'refurbishments',
+      },
+      {
+        title: 'Flooring',
+        image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=2340&auto=format&fit=crop',
+        slug: 'flooring',
+      },
+      {
+        title: 'Decking & External Woodwork',
+        image: 'https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=2340&auto=format&fit=crop',
+        slug: 'decking-external',
+      },
+      {
+        title: 'CNC Machining',
+        image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?q=80&w=2340&auto=format&fit=crop',
+        slug: 'cnc-machining',
+      },
+      {
+        title: 'Restoration & Property Maintenance',
+        image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2340&auto=format&fit=crop',
+        slug: 'restoration-maintenance',
+      },
+      {
+        title: 'Commercial',
+        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2340&auto=format&fit=crop',
+        slug: 'commercial',
+      },
+      {
+        title: 'Misc.',
+        image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2340&auto=format&fit=crop',
+        slug: 'misc',
       },
     ],
   },
@@ -174,66 +323,71 @@ From complete bathroom renovations to stunning kitchen makeovers and precision t
     subheading: 'Quality workmanship you can trust',
     items: [
       {
-        title: 'Expert Craftsmanship',
-        description: 'Years of experience delivering exceptional results with attention to every detail.',
+        title: 'Personalised Approach',
+        description: 'We take the time to fully understand your requirements, drawing on our experience to create a tailored solution that meets your needs perfectly.',
+        icon: 'users',
+      },
+      {
+        title: 'Excellence and Professionalism',
+        description: 'We take great pride in our meticulous approach and are committed to ensuring complete satisfaction. Our dedication guarantees that we consistently deliver a high-end finish.',
         icon: 'award',
       },
       {
-        title: 'Quality Materials',
-        description: 'We use only premium materials and products from trusted suppliers.',
-        icon: 'gem',
-      },
-      {
-        title: 'Fully Insured',
-        description: 'Complete peace of mind with full public liability insurance coverage.',
+        title: 'Insured and Guaranteed',
+        description: 'Accidents can happen and are often unavoidable. That\'s why we maintain full public liability insurance, ensuring that both parties are protected.',
         icon: 'shield',
-      },
-      {
-        title: 'Free Quotes',
-        description: 'Transparent pricing with no hidden costs. Get a free, no-obligation quote.',
-        icon: 'calculator',
       },
     ],
   },
 
   about: {
-    heading: 'About Bigwood Bathrooms & Kitchens',
-    content: `Bigwood Bathrooms & Kitchens is a dedicated team of skilled tradespeople committed to delivering outstanding bathroom, kitchen, and tiling solutions for homeowners across the local area.
-
-With a passion for quality craftsmanship and an eye for detail, we approach every project—big or small—with the same level of care and professionalism. From initial consultation through to final completion, we work closely with our clients to ensure their vision becomes reality.
-
-Our reputation is built on honest communication, reliable service, and workmanship that speaks for itself. We take pride in leaving every customer completely satisfied with their transformed space.`,
-    image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=2340&auto=format&fit=crop',
-    imageAlt: 'Professional tradesperson at work',
+    heading: 'About Us',
+    content: '',
+    image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2340&auto=format&fit=crop',
+    imageAlt: 'Custom carpentry workshop',
     features: [
-      'Experienced professionals',
-      'Quality guaranteed',
+      'Over 40 years combined experience',
       'Fully insured',
-      'Local business',
+      'North West London & Chilterns',
+      'Commercial & Residential',
     ],
     stats: [
-      { value: '10+', label: 'Years Experience' },
-      { value: '500+', label: 'Projects Completed' },
+      { value: '40+', label: 'Years Combined Experience' },
+      { value: '1000+', label: 'Projects Completed' },
       { value: '100%', label: 'Satisfaction Rate' },
     ],
     values: [
       {
-        title: 'Quality First',
-        description: 'We never compromise on quality. Every project receives our full attention and expertise.',
+        title: 'Personalised Approach',
+        description: 'We take the time to fully understand your requirements, drawing on our experience to create a tailored solution that meets your needs perfectly.',
+        icon: 'users',
       },
       {
-        title: 'Customer Focused',
-        description: 'Your satisfaction is our priority. We listen, advise, and deliver exactly what you need.',
+        title: 'Excellence and Professionalism',
+        description: 'We take great pride in our meticulous approach and are committed to ensuring complete satisfaction. Our dedication guarantees that we consistently deliver a high-end finish.',
+        icon: 'award',
       },
       {
-        title: 'Honest & Transparent',
-        description: 'Clear communication and fair pricing. No hidden costs or unexpected surprises.',
-      },
-      {
-        title: 'Reliable Service',
-        description: 'We turn up when we say we will and complete projects on time and within budget.',
+        title: 'Insured and Guaranteed',
+        description: 'Accidents can happen and are often unavoidable. That\'s why we maintain full public liability insurance, ensuring that both parties are protected.',
+        icon: 'shield',
       },
     ],
+    team: [
+      {
+        name: 'Andy Ford',
+        role: 'Custom Carpentry London',
+        bio: 'With over 35 years of experience in carpentry, I embarked on my journey in 1984 at St Albans College in Hertfordshire.\n\nThroughout my career, I\'ve worked with various companies, gaining expertise not only in woodworking but also in general building. My specialty is second fix finish work, focusing on the beautiful details you see inside homes.\n\nOver the years, I\'ve built a strong network of qualified and experienced tradesmen to support my projects, ensuring the highest quality in every endeavor.',
+        image: '/logo/andy_ford.avif',
+      },
+      {
+        name: 'Rhys Merritt',
+        role: 'Custom Carpentry Chilterns',
+        bio: 'I had the privilege of training directly alongside Andy for over three years, where I honed essential skills in carpentry and light building work.\n\nMy passion lies in finish carpentry; skirting and architraves, wardrobe and kitchen installations.\n\nAdditionally, my background in ICT management brings a unique perspective to my projects.',
+        image: '/logo/rhys_merritt.avif',
+      },
+    ],
+    teamPhoto: '/logo/andyandrhys.avif',
   },
 
   gallery: {
@@ -241,73 +395,97 @@ Our reputation is built on honest communication, reliable service, and workmansh
     subheading: 'A selection of our recent work',
     images: [
       {
-        src: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Modern luxury bathroom renovation',
-        category: 'bathroom',
+        src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Custom built wardrobe installation',
+        category: 'wardrobes',
       },
       {
         src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Contemporary kitchen installation',
-        category: 'kitchen',
+        alt: 'Bespoke kitchen installation',
+        category: 'kitchens',
       },
       {
-        src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Elegant bathroom with freestanding bath',
-        category: 'bathroom',
+        src: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Elegant wall panelling',
+        category: 'panelling',
       },
       {
-        src: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Modern white kitchen design',
-        category: 'kitchen',
+        src: 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Custom shelving unit',
+        category: 'shelving',
       },
       {
-        src: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Professional tile work',
-        category: 'tiling',
+        src: 'https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Garden decking project',
+        category: 'decking',
       },
       {
-        src: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Stylish bathroom renovation',
-        category: 'bathroom',
+        src: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Carpentry workshop craftsmanship',
+        category: 'misc',
       },
     ],
   },
 
   testimonials: {
-    heading: 'What Our Clients Say',
-    subheading: "Don't just take our word for it",
+    heading: 'Testimonials',
+    subheading: 'What our clients say about us',
+    intro: '',
     entries: [
       {
-        quote: 'Absolutely delighted with our new bathroom. The team were professional, tidy, and the finished result exceeded our expectations. Would highly recommend to anyone looking for quality workmanship.',
+        quote: 'Custom Carpentry transformed our living space with beautiful built-in wardrobes. The attention to detail was exceptional, and the team were professional from start to finish. Highly recommend!',
         name: 'Sarah M.',
-        location: 'Local Area',
+        location: 'North London',
+        rating: 5,
       },
       {
-        quote: 'From start to finish, the service was excellent. They helped us design the perfect kitchen and the installation was completed on time and on budget. Fantastic attention to detail.',
+        quote: 'Andy and his team did a fantastic job on our kitchen installation. They listened to exactly what we wanted and delivered beyond our expectations. The craftsmanship is outstanding.',
         name: 'James & Emma T.',
-        location: 'Local Area',
+        location: 'Chilterns',
+        rating: 5,
       },
       {
-        quote: 'Had our entire bathroom retiled and a new shower installed. The quality of work is outstanding. Very pleased we chose Bigwood Bathrooms & Kitchens for our project.',
+        quote: 'We\'ve used Custom Carpentry for multiple projects now - shelving, panelling, and a complete room refurbishment. Every time they deliver exceptional quality and great value.',
         name: 'David C.',
-        location: 'Local Area',
+        location: 'Hampstead',
+        rating: 5,
+      },
+      {
+        quote: 'Professional, reliable and truly skilled craftsmen. Our bespoke furniture fits perfectly and the finish is immaculate. Would definitely use again.',
+        name: 'Michelle R.',
+        location: 'High Wycombe',
+        rating: 5,
       },
     ],
   },
 
   contact: {
-    heading: 'Get in Touch',
-    subheading: 'Ready to start your project? Contact us for a free, no-obligation quote.',
-    phone: '07853 397359',
-    email: 'info@bigwoodbathrooms.co.uk',
-    serviceArea: 'Serving the local area and surrounding regions',
+    heading: 'Contact Us',
+    subheading: 'Have questions or need assistance? Reach out to us via email, give us a call or simply complete the form below! We\'re always here to provide a free consultation and help you with anything you need.',
+    phone: '+44 7833 797 963',
+    email: 'info@custom-carpentry.co.uk',
+    serviceArea: 'Serving North West London and the Chilterns',
+    locations: [
+      {
+        name: 'London',
+        address: 'Malvern Court, Oakleigh Road North',
+        city: 'London, N20 0TF',
+        phone: '+44 7833 797 963',
+      },
+      {
+        name: 'Chilterns',
+        address: 'Fern Walk, Hazlemere',
+        city: 'High Wycombe, HP15 7RQ',
+        phone: '+44 7872 590 975',
+      },
+    ],
     hours: [
       { day: 'Monday - Friday', time: '8:00 AM - 6:00 PM' },
       { day: 'Saturday', time: '9:00 AM - 4:00 PM' },
       { day: 'Sunday', time: 'Closed' },
     ],
     form: {
-      heading: 'Request a Quote',
+      heading: 'Get In Touch',
       fields: {
         name: { label: 'Name', placeholder: 'Your name' },
         email: { label: 'Email', placeholder: 'you@example.com' },
@@ -315,11 +493,15 @@ Our reputation is built on honest communication, reliable service, and workmansh
         service: {
           label: 'Service Interested In',
           options: [
-            'Bathroom Installation',
-            'Kitchen Fitting',
-            'Tiling',
-            'Full Renovation',
-            'Repairs & Maintenance',
+            'Shelving & Storage',
+            'Wardrobes',
+            'Panelling',
+            'Media Walls',
+            'Kitchens',
+            'CNC Machining',
+            'Property Maintenance',
+            'Full Refurbishments',
+            'Decking and External Woodwork',
             'Other',
           ],
         },
@@ -330,12 +512,19 @@ Our reputation is built on honest communication, reliable service, and workmansh
   },
 
   cta: {
-    heading: 'Ready to Transform Your Space?',
-    subheading: 'Get in touch today for a free, no-obligation quote',
-    phone: '07853 397359',
-    buttonText: 'Call Us Now',
-    buttonHref: 'tel:07853397359',
-    secondaryButtonText: 'Request a Quote',
-    secondaryButtonHref: '/contact',
+    heading: 'In need of an estimate or advice?',
+    subheading: 'Contact us now',
+    phone: '+44 7833 797 963',
+    buttonText: 'Contact Us Now',
+    buttonHref: '/contact',
+    secondaryButtonText: 'Call Us',
+    secondaryButtonHref: 'tel:+447833797963',
+  },
+
+  updates: {
+    heading: 'Updates',
+    intro: 'Follow us on Instagram for our latest projects and updates.',
+    instagramHandle: '@customcarpentry',
+    instagramUrl: 'https://instagram.com/customcarpentry',
   },
 };

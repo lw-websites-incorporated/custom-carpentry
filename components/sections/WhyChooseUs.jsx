@@ -1,14 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Award, Gem, Shield, Calculator } from 'lucide-react';
+import { Award, Users, Shield } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
 
 const iconMap = {
   award: Award,
-  gem: Gem,
+  users: Users,
   shield: Shield,
-  calculator: Calculator,
 };
 
 export default function WhyChooseUs() {
@@ -33,15 +32,15 @@ export default function WhyChooseUs() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-padding bg-[#2D2D2D] relative overflow-hidden">
+    <section ref={sectionRef} className="section-padding bg-[#1E1E1E] relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-[#B8860B]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#B8860B]/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#089DC0]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#089DC0]/10 rounded-full blur-3xl" />
 
       <div className="container-custom relative z-10">
         {/* Header */}
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="copper-line-center mb-6" />
+          <div className="accent-line-center mb-6" />
           <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
             {siteConfig.whyChooseUs.heading}
           </h2>
@@ -51,7 +50,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {siteConfig.whyChooseUs.items.map((item, index) => {
             const Icon = iconMap[item.icon] || Award;
             return (
@@ -66,8 +65,8 @@ export default function WhyChooseUs() {
               >
                 {/* Icon Circle */}
                 <div className="w-20 h-20 mx-auto mb-6 relative">
-                  <div className="absolute inset-0 bg-[#B8860B]/20 rounded-full" />
-                  <div className="absolute inset-2 bg-[#B8860B] rounded-full flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[#089DC0]/20 rounded-full" />
+                  <div className="absolute inset-2 bg-[#089DC0] rounded-full flex items-center justify-center">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                 </div>

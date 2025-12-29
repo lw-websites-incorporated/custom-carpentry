@@ -68,8 +68,8 @@ export default function Gallery({ limit = 6, showHeading = true }) {
           {/* Header */}
           {showHeading && (
             <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="copper-line-center mb-6" />
-              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#2D2D2D] mb-4">
+              <div className="accent-line-center mb-6" />
+              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E] mb-4">
                 {siteConfig.gallery.heading}
               </h2>
               <p className="text-[#666666] max-w-2xl mx-auto">
@@ -98,14 +98,14 @@ export default function Gallery({ limit = 6, showHeading = true }) {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-[#2D2D2D]/0 group-hover:bg-[#2D2D2D]/60 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-[#1E1E1E]/0 group-hover:bg-[#1E1E1E]/60 transition-all duration-300 flex items-center justify-center">
                   <span className="text-white font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                     View Project
                   </span>
                 </div>
                 {/* Category Badge */}
                 {image.category && (
-                  <div className="absolute top-4 left-4 bg-[#B8860B] text-white text-xs font-medium px-3 py-1 rounded capitalize">
+                  <div className="absolute top-4 left-4 bg-[#089DC0] text-white text-xs font-medium px-3 py-1 rounded capitalize">
                     {image.category}
                   </div>
                 )}

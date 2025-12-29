@@ -36,7 +36,7 @@ export default function Navigation() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo/bigwood-logo.png"
+                src={siteConfig.logo.src}
                 alt={siteConfig.logo.alt}
                 width={180}
                 height={50}
@@ -46,15 +46,15 @@ export default function Navigation() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-6">
               {siteConfig.nav.links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-medium transition-colors duration-300 hover:text-[#B8860B] ${
+                  className={`font-medium transition-colors duration-300 hover:text-[#089DC0] ${
                     pathname === link.href
-                      ? 'text-[#B8860B]'
-                      : 'text-[#333333]'
+                      ? 'text-[#089DC0]'
+                      : 'text-[#1E1E1E]'
                   }`}
                 >
                   {link.label}
@@ -64,7 +64,7 @@ export default function Navigation() {
               {/* CTA Button */}
               <Link
                 href="/contact"
-                className="bg-[#B8860B] text-white px-5 py-2.5 rounded font-medium hover:bg-[#9a7209] transition-all duration-300 hover:-translate-y-0.5"
+                className="bg-[#089DC0] text-white px-5 py-2.5 rounded font-medium hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-0.5"
               >
                 Get a Quote
               </Link>
@@ -73,7 +73,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 text-[#2D2D2D]"
+              className="lg:hidden p-2 text-[#1E1E1E]"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -83,7 +83,7 @@ export default function Navigation() {
           {/* Mobile Navigation */}
           <div
             className={`lg:hidden overflow-hidden transition-all duration-300 ${
-              isOpen ? 'max-h-96 mt-4 pt-4 border-t border-gray-100' : 'max-h-0'
+              isOpen ? 'max-h-[500px] mt-4 pt-4 border-t border-gray-100' : 'max-h-0'
             }`}
           >
             <div className="space-y-2">
@@ -94,8 +94,8 @@ export default function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block py-3 px-4 rounded font-medium transition-colors duration-300 ${
                     pathname === link.href
-                      ? 'bg-[#F5F0E8] text-[#B8860B]'
-                      : 'text-[#333333] hover:bg-[#F5F0E8] hover:text-[#B8860B]'
+                      ? 'bg-[#E8F4F8] text-[#089DC0]'
+                      : 'text-[#1E1E1E] hover:bg-[#E8F4F8] hover:text-[#089DC0]'
                   }`}
                 >
                   {link.label}
@@ -104,7 +104,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block text-center bg-[#B8860B] text-white py-3 px-4 rounded font-medium hover:bg-[#9a7209] transition-colors duration-300 mt-2"
+                className="block text-center bg-[#089DC0] text-white py-3 px-4 rounded font-medium hover:bg-[#067a99] transition-colors duration-300 mt-2"
               >
                 Get a Quote
               </Link>

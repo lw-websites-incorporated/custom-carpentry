@@ -11,6 +11,7 @@ export default function Hero({
   imageAlt,
   heading,
   subheading,
+  additionalContent,
   ctaText,
   ctaHref,
   secondaryCtaText,
@@ -41,6 +42,7 @@ export default function Hero({
     imageAlt: imageAlt || siteConfig.hero.imageAlt,
     heading: heading || siteConfig.hero.heading,
     subheading: subheading || siteConfig.hero.subheading,
+    additionalContent: additionalContent || siteConfig.hero.additionalContent,
     ctaText: ctaText || siteConfig.hero.ctaText,
     ctaHref: ctaHref || siteConfig.hero.ctaHref,
     secondaryCtaText: secondaryCtaText || siteConfig.hero.secondaryCtaText,
@@ -63,17 +65,17 @@ export default function Hero({
 
       {/* Overlay */}
       {overlay && (
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2D2D2D]/80 via-[#2D2D2D]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1E1E1E]/85 via-[#1E1E1E]/70 to-transparent" />
       )}
 
       {/* Decorative Elements */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-32 bg-[#B8860B] hidden lg:block" />
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-32 bg-[#089DC0] hidden lg:block" />
 
       {/* Content */}
       <div className="relative z-10 container-custom py-32">
         <div className="max-w-2xl">
-          {/* Copper accent line */}
-          <div className="w-20 h-1 bg-[#B8860B] mb-8 animate-fade-in-up" />
+          {/* Accent line */}
+          <div className="w-20 h-1 bg-[#089DC0] mb-8 animate-fade-in-up" />
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-playfair font-bold text-white mb-6 animate-fade-in-up animation-delay-100">
@@ -81,22 +83,33 @@ export default function Hero({
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-white/90 mb-10 animate-fade-in-up animation-delay-200">
+          <p className="text-lg md:text-xl text-white/90 mb-6 animate-fade-in-up animation-delay-200">
             {heroData.subheading}
           </p>
+
+          {/* Additional Content Paragraphs */}
+          {heroData.additionalContent && heroData.additionalContent.length > 0 && (
+            <div className="space-y-4 mb-10 animate-fade-in-up animation-delay-200">
+              {heroData.additionalContent.map((paragraph, index) => (
+                <p key={index} className="text-white/80">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          )}
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
             <Link
               href={heroData.ctaHref}
-              className="inline-flex items-center justify-center bg-[#B8860B] text-white px-8 py-4 font-medium text-lg rounded hover:bg-[#9a7209] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="inline-flex items-center justify-center bg-[#089DC0] text-white px-8 py-4 font-medium text-lg rounded hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               {heroData.ctaText}
             </Link>
             {heroData.secondaryCtaText && (
               <Link
                 href={heroData.secondaryCtaHref}
-                className="inline-flex items-center justify-center bg-white text-[#2D2D2D] px-8 py-4 font-medium text-lg rounded hover:bg-[#F5F0E8] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="inline-flex items-center justify-center bg-white text-[#1E1E1E] px-8 py-4 font-medium text-lg rounded hover:bg-[#E8F4F8] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 {heroData.secondaryCtaText}
               </Link>

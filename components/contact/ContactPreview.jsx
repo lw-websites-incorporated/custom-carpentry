@@ -33,8 +33,8 @@ export default function ContactPreview() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Contact Info */}
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="copper-line mb-6" />
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#2D2D2D] mb-4">
+            <div className="accent-line mb-6" />
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E] mb-4">
               {siteConfig.contact.heading}
             </h2>
             <p className="text-[#666666] mb-8">
@@ -44,14 +44,14 @@ export default function ContactPreview() {
             {/* Contact Details */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#F5F0E8] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-[#B8860B]" />
+                <div className="w-12 h-12 bg-[#E8F4F8] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-[#089DC0]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#2D2D2D] mb-1">Phone</h4>
+                  <h4 className="font-semibold text-[#1E1E1E] mb-1">Phone</h4>
                   <a
                     href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`}
-                    className="text-[#B8860B] hover:underline text-lg font-medium"
+                    className="text-[#089DC0] hover:underline text-lg font-medium"
                   >
                     {siteConfig.contact.phone}
                   </a>
@@ -59,14 +59,14 @@ export default function ContactPreview() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#F5F0E8] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-[#B8860B]" />
+                <div className="w-12 h-12 bg-[#E8F4F8] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-[#089DC0]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#2D2D2D] mb-1">Email</h4>
+                  <h4 className="font-semibold text-[#1E1E1E] mb-1">Email</h4>
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
-                    className="text-[#B8860B] hover:underline"
+                    className="text-[#089DC0] hover:underline"
                   >
                     {siteConfig.contact.email}
                   </a>
@@ -74,11 +74,11 @@ export default function ContactPreview() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#F5F0E8] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-[#B8860B]" />
+                <div className="w-12 h-12 bg-[#E8F4F8] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-[#089DC0]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#2D2D2D] mb-1">Service Area</h4>
+                  <h4 className="font-semibold text-[#1E1E1E] mb-1">Service Area</h4>
                   <p className="text-[#666666]">{siteConfig.contact.serviceArea}</p>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function ContactPreview() {
             {/* View Full Contact Page Link */}
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 mt-8 text-[#B8860B] font-medium hover:gap-3 transition-all duration-300"
+              className="inline-flex items-center gap-2 mt-8 text-[#089DC0] font-medium hover:gap-3 transition-all duration-300"
             >
               View full contact details
               <ArrowRight className="w-5 h-5" />

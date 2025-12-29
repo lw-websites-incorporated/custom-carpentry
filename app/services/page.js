@@ -1,134 +1,141 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { siteConfig } from '@/config/siteConfig';
-import { Bath, UtensilsCrossed, Grid3X3, Home, Wrench, Check, ArrowRight } from 'lucide-react';
 import PageHero from '@/components/hero/PageHero';
-import CTABanner from '@/components/cta/CTABanner';
-
-const iconMap = {
-  bath: Bath,
-  kitchen: UtensilsCrossed,
-  grid: Grid3X3,
-  home: Home,
-  wrench: Wrench,
-};
-
-const serviceImages = {
-  'Bathroom Fitting': 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2340&auto=format&fit=crop',
-  'Kitchen Installation': 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop',
-  'Tiling': 'https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=2340&auto=format&fit=crop',
-  'Renovations': 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2340&auto=format&fit=crop',
-  'Repairs & Maintenance': 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=2340&auto=format&fit=crop',
-};
-
-export const metadata = {
-  title: 'Our Services | Bigwood Bathrooms & Kitchens',
-  description: 'Professional bathroom fitting, kitchen installation, tiling, renovations, and repairs. Quality craftsmanship for your home.',
-};
+import { ArrowRight } from 'lucide-react';
+import { siteConfig } from '@/config/siteConfig';
 
 export default function ServicesPage() {
-  const { services } = siteConfig;
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
-      {/* Hero Section */}
       <PageHero
-        title="Our Services"
-        subtitle="Comprehensive bathroom, kitchen, and tiling solutions"
-        image="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop"
-        imageAlt="Modern kitchen installation"
+        title={siteConfig.servicesPage.heading}
+        subtitle={siteConfig.servicesPage.intro}
+        image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2340&auto=format&fit=crop"
+        imageAlt="Bespoke carpentry services"
       />
 
-      {/* Services Overview */}
-      <section className="section-padding bg-white">
+      {/* Main Services Grid */}
+      <section ref={sectionRef} className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <div className="copper-line-center mb-6" />
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#2D2D2D] mb-4">
-              {services.heading}
+          <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="accent-line-center mb-6" />
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E]">
+              Our Main Services
             </h2>
-            <p className="text-[#666666] max-w-2xl mx-auto">
-              {services.subheading}
-            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {siteConfig.servicesPage.mainServices.map((service, index) => (
+              <div
+                key={service.title}
+                className={`group bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-700 card-hover ${
+                  isVisible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                {/* Image */}
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E1E1E]/60 to-transparent" />
+                  <h3 className="absolute bottom-4 left-4 right-4 text-xl font-playfair font-bold text-white">
+                    {service.title}
+                  </h3>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <p className="text-[#666666] text-sm leading-relaxed mb-4">
+                    {service.description}
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center text-[#089DC0] font-medium text-sm hover:gap-3 transition-all duration-300 gap-2"
+                  >
+                    Enquire Now
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Individual Service Sections */}
-      {services.items.map((service, index) => {
-        const IconComponent = iconMap[service.icon] || Home;
-        const isEven = index % 2 === 0;
-        const imageUrl = serviceImages[service.title] || serviceImages['Bathroom Fitting'];
+      {/* Additional Services */}
+      <section className="section-padding bg-[#F5F5F5]">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <div className="accent-line-center mb-6" />
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E] mb-4">
+              We Also Undertake
+            </h2>
+            <p className="text-[#666666] max-w-2xl mx-auto">
+              In addition to our main services, we offer a wide range of carpentry and woodworking solutions.
+            </p>
+          </div>
 
-        return (
-          <section
-            key={service.title}
-            className={`py-16 md:py-24 ${isEven ? 'bg-white' : 'bg-[#F5F0E8]'}`}
+          {/* Tag-style layout */}
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            {siteConfig.servicesPage.additionalServices.map((service, index) => (
+              <span
+                key={service}
+                className="bg-white px-5 py-3 rounded-full text-[#1E1E1E] font-medium shadow-sm hover:shadow-md hover:bg-[#089DC0] hover:text-white transition-all duration-300 cursor-default"
+              >
+                {service}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-[#089DC0]">
+        <div className="container-custom text-center">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
+            Have a Project in Mind?
+          </h2>
+          <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            Get in touch today to discuss your requirements and receive a free, no-obligation quote.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-white text-[#089DC0] px-8 py-4 rounded font-medium text-lg hover:bg-[#E8F4F8] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
-            <div className="container-custom">
-              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
-                !isEven ? 'lg:grid-flow-dense' : ''
-              }`}>
-                {/* Image */}
-                <div className={`relative ${!isEven ? 'lg:col-start-2' : ''}`}>
-                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
-                    <Image
-                      src={imageUrl}
-                      alt={service.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  {/* Decorative frame */}
-                  <div className={`absolute -bottom-4 ${isEven ? '-right-4' : '-left-4'} w-full h-full border-2 border-[#B8860B] rounded-lg -z-10 hidden md:block`} />
-                </div>
-
-                {/* Content */}
-                <div className={!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  {/* Icon */}
-                  <div className="w-16 h-16 bg-[#B8860B]/10 rounded-lg flex items-center justify-center mb-6">
-                    <IconComponent className="w-8 h-8 text-[#B8860B]" />
-                  </div>
-
-                  <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#2D2D2D] mb-4">
-                    {service.title}
-                  </h2>
-
-                  <p className="text-[#666666] text-lg leading-relaxed mb-8">
-                    {service.description}
-                  </p>
-
-                  {/* Features List */}
-                  {service.features && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                      {service.features.map((feature, i) => (
-                        <div key={i} className="flex items-center gap-3">
-                          <div className="w-5 h-5 bg-[#B8860B] rounded-full flex items-center justify-center flex-shrink-0">
-                            <Check className="w-3 h-3 text-white" />
-                          </div>
-                          <span className="text-[#333333] text-sm">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* CTA */}
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 bg-[#B8860B] text-white px-6 py-3 rounded font-medium hover:bg-[#9a7209] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    Get a Quote
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-        );
-      })}
-
-      {/* Bottom CTA */}
-      <CTABanner />
+            Contact Us
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

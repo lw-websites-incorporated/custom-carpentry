@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
 import { siteConfig } from '@/config/siteConfig';
 
 export default function Welcome() {
@@ -26,44 +26,22 @@ export default function Welcome() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-padding bg-white">
+    <section ref={sectionRef} className="section-padding bg-[#E8F4F8]">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
-          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            {/* Copper accent */}
-            <div className="copper-line mb-6" />
+        <div className={`text-center max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* Accent line */}
+          <div className="accent-line-center mb-6" />
 
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#2D2D2D] mb-6">
-              {siteConfig.welcome.heading}
-            </h2>
+          <h2 className="text-2xl md:text-3xl font-playfair font-bold text-[#1E1E1E] mb-8">
+            {siteConfig.welcome.heading}
+          </h2>
 
-            <div className="space-y-4 text-[#666666] leading-relaxed">
-              {siteConfig.welcome.content.split('\n\n').map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
-
-            {/* Decorative element */}
-            <div className="mt-8 flex items-center gap-4">
-              <div className="w-12 h-px bg-[#B8860B]" />
-              <span className="text-[#B8860B] font-medium">Quality you can trust</span>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className={`relative transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
-              <Image
-                src={siteConfig.welcome.image}
-                alt={siteConfig.welcome.imageAlt}
-                fill
-                className="object-cover"
-              />
-            </div>
-            {/* Decorative frame */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#B8860B] rounded-lg -z-10" />
-          </div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center bg-[#089DC0] text-white px-8 py-4 font-medium text-lg rounded hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+            Get In Touch
+          </Link>
         </div>
       </div>
     </section>

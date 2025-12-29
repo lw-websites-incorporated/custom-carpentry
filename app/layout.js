@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
           font-sans
           antialiased
           bg-white
-          text-[#333333]
+          text-[#1E1E1E]
         `}
       >
         <Navigation />
