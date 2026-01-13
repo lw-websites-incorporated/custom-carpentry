@@ -5,10 +5,12 @@ export default function PageHero({
   subtitle,
   image = 'https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2340&auto=format&fit=crop',
   imageAlt = 'Page header background',
-  imagePosition = 'center'
+  imagePosition = 'center',
+  imageScale = 1,
+  minHeightClass = 'min-h-[40vh] md:min-h-[50vh]'
 }) {
   return (
-    <section className="relative min-h-[40vh] md:min-h-[50vh] flex items-center overflow-hidden">
+    <section className={`relative ${minHeightClass} flex items-center overflow-hidden`}>
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -16,17 +18,17 @@ export default function PageHero({
           alt={imageAlt}
           fill
           className="object-cover"
-          style={{ objectPosition: imagePosition }}
+          style={{ objectPosition: imagePosition, transform: `scale(${imageScale})` }}
           priority
           quality={85}
         />
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#1E1E1E]/70" />
+      <div className="absolute inset-0 bg-[#1A1D21]/70" />
 
       {/* Decorative element */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-24 bg-[#089DC0] hidden lg:block" />
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-24 bg-[#1D2B3A] hidden lg:block" />
 
       {/* Content */}
       <div className="relative z-10 container-custom py-32 text-center">

@@ -32,10 +32,10 @@ export default function WhyChooseUs() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-padding bg-[#1E1E1E] relative overflow-hidden">
+    <section ref={sectionRef} className="section-padding bg-[#1A1D21] relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-[#089DC0]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#089DC0]/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#1D2B3A]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#1D2B3A]/10 rounded-full blur-3xl" />
 
       <div className="container-custom relative z-10">
         {/* Header */}
@@ -65,8 +65,8 @@ export default function WhyChooseUs() {
               >
                 {/* Icon Circle */}
                 <div className="w-20 h-20 mx-auto mb-6 relative">
-                  <div className="absolute inset-0 bg-[#089DC0]/20 rounded-full" />
-                  <div className="absolute inset-2 bg-[#089DC0] rounded-full flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[#1D2B3A]/20 rounded-full" />
+                  <div className="absolute inset-2 bg-[#1D2B3A] rounded-full flex items-center justify-center">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                 </div>

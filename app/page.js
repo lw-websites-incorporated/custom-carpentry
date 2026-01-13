@@ -11,7 +11,7 @@ export default function HomePage() {
       <Services showCTA={true} />
       <Welcome />
       <Gallery limit={6} />
-      <Testimonials limit={3} />
+      <Testimonials limit={4} />
     </>
   );
 }

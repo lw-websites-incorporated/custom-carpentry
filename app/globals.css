@@ -4,8 +4,8 @@
 
 /* Base styles */
 body {
-  background-color: #ffffff;
-  color: #1E1E1E;
+  background-color: #F2F4F7;
+  color: #1A1D21;
   font-family: var(--font-opensans), 'Open Sans', system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.7;
@@ -37,16 +37,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #E8F4F8;
+  background: #F2F4F7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #089DC0;
+  background: #1D2B3A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #067a99;
+  background: #15202C;
 }
 
 /* Fade in animation for scroll effects */
@@ -84,19 +84,19 @@ html {
 
 /* Button hover effect */
 .btn-primary {
-  @apply bg-[#089DC0] text-white px-6 py-3 font-medium transition-all duration-300;
+  @apply bg-[#1D2B3A] text-white px-6 py-3 font-medium transition-all duration-300;
 }
 
 .btn-primary:hover {
-  @apply bg-[#067a99] transform -translate-y-0.5 shadow-lg;
+  @apply bg-[#15202C] transform -translate-y-0.5 shadow-lg;
 }
 
 .btn-secondary {
-  @apply bg-transparent border-2 border-[#089DC0] text-[#089DC0] px-6 py-3 font-medium transition-all duration-300;
+  @apply bg-transparent border-2 border-[#1D2B3A] text-[#1D2B3A] px-6 py-3 font-medium transition-all duration-300;
 }
 
 .btn-secondary:hover {
-  @apply bg-[#089DC0] text-white transform -translate-y-0.5;
+  @apply bg-[#1D2B3A] text-white transform -translate-y-0.5;
 }
 
 /* Card hover effects */
@@ -110,20 +110,20 @@ html {
 
 /* Decorative accent line */
 .accent-line {
-  @apply w-16 h-1 bg-[#089DC0];
+  @apply w-16 h-1 bg-[#1D2B3A];
 }
 
 .accent-line-center {
-  @apply w-16 h-1 bg-[#089DC0] mx-auto;
+  @apply w-16 h-1 bg-[#1D2B3A] mx-auto;
 }
 
 /* Legacy support - copper-line class */
 .copper-line {
-  @apply w-16 h-1 bg-[#089DC0];
+  @apply w-16 h-1 bg-[#1D2B3A];
 }
 
 .copper-line-center {
-  @apply w-16 h-1 bg-[#089DC0] mx-auto;
+  @apply w-16 h-1 bg-[#1D2B3A] mx-auto;
 }
 
 /* Section padding */

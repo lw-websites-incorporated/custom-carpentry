@@ -42,7 +42,7 @@ export default function ServicesPage() {
         <div className="container-custom">
           <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="accent-line-center mb-6" />
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E]">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1A1D21]">
               Our Main Services
             </h2>
           </div>
@@ -66,7 +66,7 @@ export default function ServicesPage() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E1E1E]/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A1D21]/60 to-transparent" />
                   <h3 className="absolute bottom-4 left-4 right-4 text-xl font-playfair font-bold text-white">
                     {service.title}
                   </h3>
@@ -74,12 +74,12 @@ export default function ServicesPage() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <p className="text-[#666666] text-sm leading-relaxed mb-4">
+                  <p className="text-[#5C6670] text-sm leading-relaxed mb-4">
                     {service.description}
                   </p>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-[#089DC0] font-medium text-sm hover:gap-3 transition-all duration-300 gap-2"
+                    className="inline-flex items-center text-[#1D2B3A] font-medium text-sm hover:gap-3 transition-all duration-300 gap-2"
                   >
                     Enquire Now
                     <ArrowRight className="w-4 h-4" />
@@ -92,14 +92,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional Services */}
-      <section className="section-padding bg-[#F5F5F5]">
+      <section className="section-padding bg-[#D6D9DE]">
         <div className="container-custom">
           <div className="text-center mb-12">
             <div className="accent-line-center mb-6" />
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E] mb-4">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1A1D21] mb-4">
               We Also Undertake
             </h2>
-            <p className="text-[#666666] max-w-2xl mx-auto">
+            <p className="text-[#5C6670] max-w-2xl mx-auto">
               In addition to our main services, we offer a wide range of carpentry and woodworking solutions.
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
             {siteConfig.servicesPage.additionalServices.map((service, index) => (
               <span
                 key={service}
-                className="bg-white px-5 py-3 rounded-full text-[#1E1E1E] font-medium shadow-sm hover:shadow-md hover:bg-[#089DC0] hover:text-white transition-all duration-300 cursor-default"
+                className="bg-white px-5 py-3 rounded-full text-[#1A1D21] font-medium shadow-sm hover:shadow-md hover:bg-[#1D2B3A] hover:text-white transition-all duration-300 cursor-default"
               >
                 {service}
               </span>
@@ -119,7 +119,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-[#089DC0]">
+      <section className="section-padding bg-[#1D2B3A]">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
             Have a Project in Mind?
@@ -129,7 +129,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-[#089DC0] px-8 py-4 rounded font-medium text-lg hover:bg-[#E8F4F8] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="inline-flex items-center gap-2 bg-white text-[#1D2B3A] px-8 py-4 rounded font-medium text-lg hover:bg-[#F2F4F7] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             Contact Us
             <ArrowRight className="w-5 h-5" />

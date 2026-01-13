@@ -27,8 +27,8 @@ export default function RootLayout({ children }) {
           ${playfair.variable}
           font-sans
           antialiased
-          bg-white
-          text-[#1E1E1E]
+          bg-[#F2F4F7]
+          text-[#1A1D21]
         `}
       >
         <Navigation />

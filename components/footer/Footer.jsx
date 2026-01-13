@@ -8,9 +8,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1E1E1E] text-white">
+    <footer className="bg-[#1A1D21] text-white">
       {/* CTA Banner */}
-      <div className="bg-[#089DC0] py-12">
+      <div className="bg-[#1D2B3A] py-12">
         <div className="container-custom text-center">
           <h2 className="text-2xl md:text-3xl font-playfair font-bold text-white mb-2">
             {siteConfig.cta.heading}
@@ -19,13 +19,13 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={siteConfig.cta.buttonHref}
-              className="inline-block bg-white text-[#089DC0] px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5"
+              className="inline-block bg-white text-[#1D2B3A] px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5"
             >
               {siteConfig.cta.buttonText}
             </Link>
             <a
               href={siteConfig.cta.secondaryButtonHref}
-              className="inline-block border-2 border-white text-white px-8 py-3 rounded font-semibold hover:bg-white hover:text-[#089DC0] transition-all duration-300"
+              className="inline-block border-2 border-white text-white px-8 py-3 rounded font-semibold hover:bg-white hover:text-[#1D2B3A] transition-all duration-300"
             >
               {siteConfig.cta.secondaryButtonText}
             </a>
@@ -61,7 +61,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-[#089DC0] transition-colors duration-300"
+                    className="text-white/70 hover:text-[#1D2B3A] transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -76,12 +76,12 @@ export default function Footer() {
             <div className="space-y-6">
               {siteConfig.footer.locations?.map((location) => (
                 <div key={location.name} className="text-sm">
-                  <h5 className="font-semibold text-[#089DC0] mb-1">{location.name}</h5>
+                  <h5 className="font-semibold text-[#1D2B3A] mb-1">{location.name}</h5>
                   <p className="text-white/70">{location.address}</p>
                   <p className="text-white/70">{location.city}</p>
                   <a
                     href={`tel:${location.phone.replace(/\s/g, '')}`}
-                    className="text-white/70 hover:text-[#089DC0] transition-colors duration-300"
+                    className="text-white/70 hover:text-[#1D2B3A] transition-colors duration-300"
                   >
                     {location.phone}
                   </a>
@@ -97,14 +97,14 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="flex items-center gap-3 text-white/70 hover:text-[#089DC0] transition-colors duration-300"
+                  className="flex items-center gap-3 text-white/70 hover:text-[#1D2B3A] transition-colors duration-300"
                 >
-                  <Mail className="w-5 h-5 text-[#089DC0]" />
+                  <Mail className="w-5 h-5 text-[#1D2B3A]" />
                   {siteConfig.contact.email}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/70">
-                <MapPin className="w-5 h-5 text-[#089DC0] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#1D2B3A] flex-shrink-0 mt-0.5" />
                 <span>{siteConfig.contact.serviceArea}</span>
               </li>
             </ul>
@@ -116,7 +116,7 @@ export default function Footer() {
                   href={siteConfig.footer.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#089DC0] transition-colors duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#1D2B3A] transition-colors duration-300"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -127,7 +127,7 @@ export default function Footer() {
                   href={siteConfig.footer.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#089DC0] transition-colors duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#1D2B3A] transition-colors duration-300"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
@@ -138,7 +138,7 @@ export default function Footer() {
                   href={siteConfig.footer.social.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#089DC0] transition-colors duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#1D2B3A] transition-colors duration-300"
                   aria-label="WhatsApp"
                 >
                   <FaWhatsapp className="w-5 h-5" />
@@ -147,7 +147,7 @@ export default function Footer() {
               {siteConfig.footer.social.email && (
                 <a
                   href={siteConfig.footer.social.email}
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#089DC0] transition-colors duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#1D2B3A] transition-colors duration-300"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />
@@ -156,7 +156,7 @@ export default function Footer() {
               {siteConfig.footer.social.phone && (
                 <a
                   href={siteConfig.footer.social.phone}
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#089DC0] transition-colors duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#1D2B3A] transition-colors duration-300"
                   aria-label="Phone"
                 >
                   <Phone className="w-5 h-5" />

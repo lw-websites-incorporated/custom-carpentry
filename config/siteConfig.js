@@ -39,25 +39,25 @@ export const siteConfig = {
 
   // Custom Carpentry color scheme
   brand: {
-    primary: '#089DC0', // blue from logo
-    secondary: '#1E1E1E', // dark charcoal from logo
-    accent: '#E8F4F8', // subtle blue tint
-    accentGray: '#F5F5F5', // light gray
-    background: '#FFFFFF', // clean white
-    dark: '#1E1E1E', // dark charcoal text
+    primary: '#1D2B3A', // navy
+    secondary: '#1A1D21', // graphite
+    accent: '#F2F4F7', // light gray
+    accentGray: '#D6D9DE', // cool gray
+    background: '#F2F4F7', // light base
+    dark: '#1A1D21', // deep text
   },
 
   styles: {
-    bgLight: 'bg-white',
-    bgPrimary: 'bg-[#089DC0]',
-    bgSecondary: 'bg-[#1E1E1E]',
-    bgAccent: 'bg-[#E8F4F8]',
-    bgAccentGray: 'bg-[#F5F5F5]',
-    textPrimary: 'text-[#1E1E1E]',
-    textMuted: 'text-[#666666]',
+    bgLight: 'bg-[#F2F4F7]',
+    bgPrimary: 'bg-[#1D2B3A]',
+    bgSecondary: 'bg-[#1A1D21]',
+    bgAccent: 'bg-[#F2F4F7]',
+    bgAccentGray: 'bg-[#D6D9DE]',
+    textPrimary: 'text-[#1A1D21]',
+    textMuted: 'text-[#5C6670]',
     textLight: 'text-white',
-    borderLight: 'border-[#E8F4F8]',
-    borderDark: 'border-[#089DC0]',
+    borderLight: 'border-[#F2F4F7]',
+    borderDark: 'border-[#1D2B3A]',
   },
 
   banner: {
@@ -432,6 +432,54 @@ export const siteConfig = {
     subheading: 'What our clients say about us',
     intro: '',
     entries: [
+      {
+        quote: 'Andy and Rhys have been exceptional. Their knowledge, craftsmanship, and attention to detail is second to none. They replaced two sets of doors and a large period window to an incredibly high standard. We cannot recommend them highly enough.',
+        name: 'Susannah Dean',
+        location: 'Google Review',
+        rating: 5,
+      },
+      {
+        quote: 'Andy and Rhys did a phenomenal job installing custom panelling throughout our house. They worked efficiently and were meticulous in their approach. The outcome looks better than we imagined.',
+        name: 'Harry',
+        location: 'Google Review',
+        rating: 5,
+      },
+      {
+        quote: 'Prompt, tidy, efficient and highly skilled carpentry. They understood our needs and created the perfect under-stairs storage solution. Looking forward to the next project.',
+        name: 'Claire Leon',
+        location: 'Google Review',
+        rating: 5,
+      },
+      {
+        quote: 'Custom Carpentry built a model rail base and supports for my garden room. Excellent job and a very friendly service. I would definitely recommend them.',
+        name: 'Rob Corne',
+        location: 'Google Review',
+        rating: 5,
+      },
+      {
+        quote: 'Andy replaced old fitted wardrobe doors and made doors to fit an open alcove. He was extremely helpful and professional and achieved the exact effect we wanted.',
+        name: 'Heather Kashi',
+        location: 'Google Review',
+        rating: 5,
+      },
+      {
+        quote: 'We hired Custom Carpentry for a complete office overhaul. They brought our vision to life with great attention to detail. Prompt, professional, and the quality is second to none.',
+        name: 'Perry Brown',
+        location: 'Google Review',
+        rating: 5,
+      },
+      {
+        quote: 'Andy and Rhys transformed a dark, damp space into a beautiful laundry room and bathroom. They went above and beyond, suggesting lovely finishing touches. Highly recommended.',
+        name: 'Tina Fenner',
+        location: 'Google Review',
+        rating: 5,
+      },
+      {
+        quote: 'Rhys and Andy did a fantastic job on our decking. Tidy, methodical, and great attention to detail. Reasonably priced and completed on time and on budget.',
+        name: 'Yvonne Merritt',
+        location: 'Google Review',
+        rating: 5,
+      },
       {
         quote: 'Custom Carpentry transformed our living space with beautiful built-in wardrobes. The attention to detail was exceptional, and the team were professional from start to finish. Highly recommend!',
         name: 'Sarah M.',

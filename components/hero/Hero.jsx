@@ -65,17 +65,17 @@ export default function Hero({
 
       {/* Overlay */}
       {overlay && (
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1E1E1E]/85 via-[#1E1E1E]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A1D21]/85 via-[#1A1D21]/70 to-transparent" />
       )}
 
       {/* Decorative Elements */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-32 bg-[#089DC0] hidden lg:block" />
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-32 bg-[#1D2B3A] hidden lg:block" />
 
       {/* Content */}
       <div className="relative z-10 container-custom py-32">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto text-center">
           {/* Accent line */}
-          <div className="w-20 h-1 bg-[#089DC0] mb-8 animate-fade-in-up" />
+          <div className="w-20 h-1 bg-[#1D2B3A] mb-8 mx-auto animate-fade-in-up" />
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-playfair font-bold text-white mb-6 animate-fade-in-up animation-delay-100">
@@ -99,17 +99,17 @@ export default function Hero({
           )}
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-300">
             <Link
               href={heroData.ctaHref}
-              className="inline-flex items-center justify-center bg-[#089DC0] text-white px-8 py-4 font-medium text-lg rounded hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="inline-flex items-center justify-center bg-[#1D2B3A] text-white px-8 py-4 font-medium text-lg rounded hover:bg-[#15202C] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               {heroData.ctaText}
             </Link>
             {heroData.secondaryCtaText && (
               <Link
                 href={heroData.secondaryCtaHref}
-                className="inline-flex items-center justify-center bg-white text-[#1E1E1E] px-8 py-4 font-medium text-lg rounded hover:bg-[#E8F4F8] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="inline-flex items-center justify-center bg-white text-[#1A1D21] px-8 py-4 font-medium text-lg rounded hover:bg-[#F2F4F7] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 {heroData.secondaryCtaText}
               </Link>

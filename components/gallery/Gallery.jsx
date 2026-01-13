@@ -69,10 +69,10 @@ export default function Gallery({ limit = 6, showHeading = true }) {
           {showHeading && (
             <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="accent-line-center mb-6" />
-              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E] mb-4">
+              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1A1D21] mb-4">
                 {siteConfig.gallery.heading}
               </h2>
-              <p className="text-[#666666] max-w-2xl mx-auto">
+              <p className="text-[#5C6670] max-w-2xl mx-auto">
                 {siteConfig.gallery.subheading}
               </p>
             </div>
@@ -98,14 +98,14 @@ export default function Gallery({ limit = 6, showHeading = true }) {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-[#1E1E1E]/0 group-hover:bg-[#1E1E1E]/60 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-[#1A1D21]/0 group-hover:bg-[#1A1D21]/60 transition-all duration-300 flex items-center justify-center">
                   <span className="text-white font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                     View Project
                   </span>
                 </div>
                 {/* Category Badge */}
                 {image.category && (
-                  <div className="absolute top-4 left-4 bg-[#089DC0] text-white text-xs font-medium px-3 py-1 rounded capitalize">
+                  <div className="absolute top-4 left-4 bg-[#1D2B3A] text-white text-xs font-medium px-3 py-1 rounded uppercase tracking-widest">
                     {image.category}
                   </div>
                 )}

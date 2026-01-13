@@ -45,7 +45,7 @@ export default function ContactPage() {
               {/* Main Contact */}
               <div className="mb-8">
                 <div className="accent-line mb-6" />
-                <h2 className="text-2xl font-playfair font-bold text-[#1E1E1E] mb-6">
+                <h2 className="text-2xl font-playfair font-bold text-[#1A1D21] mb-6">
                   Get in Touch
                 </h2>
 
@@ -54,12 +54,12 @@ export default function ContactPage() {
                     href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`}
                     className="flex items-start gap-4 group"
                   >
-                    <div className="w-12 h-12 bg-[#089DC0] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#067a99] transition-colors">
+                    <div className="w-12 h-12 bg-[#1D2B3A] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#15202C] transition-colors">
                       <Phone className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-[#666666] mb-1">Mobile</p>
-                      <p className="text-lg font-semibold text-[#1E1E1E] group-hover:text-[#089DC0] transition-colors">
+                      <p className="text-sm text-[#5C6670] mb-1">Mobile</p>
+                      <p className="text-lg font-semibold text-[#1A1D21] group-hover:text-[#1D2B3A] transition-colors">
                         {siteConfig.contact.phone}
                       </p>
                     </div>
@@ -69,12 +69,12 @@ export default function ContactPage() {
                     href={`mailto:${siteConfig.contact.email}`}
                     className="flex items-start gap-4 group"
                   >
-                    <div className="w-12 h-12 bg-[#089DC0] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#067a99] transition-colors">
+                    <div className="w-12 h-12 bg-[#1D2B3A] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#15202C] transition-colors">
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-[#666666] mb-1">Email</p>
-                      <p className="font-semibold text-[#1E1E1E] group-hover:text-[#089DC0] transition-colors">
+                      <p className="text-sm text-[#5C6670] mb-1">Email</p>
+                      <p className="font-semibold text-[#1A1D21] group-hover:text-[#1D2B3A] transition-colors">
                         {siteConfig.contact.email}
                       </p>
                     </div>
@@ -84,21 +84,21 @@ export default function ContactPage() {
 
               {/* Locations */}
               <div className="mb-8">
-                <h3 className="text-xl font-playfair font-bold text-[#1E1E1E] mb-4">
+                <h3 className="text-xl font-playfair font-bold text-[#1A1D21] mb-4">
                   Our Locations
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {siteConfig.contact.locations.map((location) => (
-                    <div key={location.name} className="bg-[#F5F5F5] rounded-lg p-5">
+                    <div key={location.name} className="bg-[#D6D9DE] rounded-lg p-5">
                       <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-[#089DC0] flex-shrink-0 mt-1" />
+                        <MapPin className="w-5 h-5 text-[#1D2B3A] flex-shrink-0 mt-1" />
                         <div>
-                          <h4 className="font-semibold text-[#089DC0] mb-1">{location.name}</h4>
-                          <p className="text-sm text-[#666666]">{location.address}</p>
-                          <p className="text-sm text-[#666666]">{location.city}</p>
+                          <h4 className="font-semibold text-[#1D2B3A] mb-1">{location.name}</h4>
+                          <p className="text-sm text-[#5C6670]">{location.address}</p>
+                          <p className="text-sm text-[#5C6670]">{location.city}</p>
                           <a
                             href={`tel:${location.phone.replace(/\s/g, '')}`}
-                            className="text-sm font-medium text-[#1E1E1E] hover:text-[#089DC0] transition-colors mt-2 inline-block"
+                            className="text-sm font-medium text-[#1A1D21] hover:text-[#1D2B3A] transition-colors mt-2 inline-block"
                           >
                             {location.phone}
                           </a>
@@ -110,18 +110,18 @@ export default function ContactPage() {
               </div>
 
               {/* Opening Hours */}
-              <div className="bg-[#E8F4F8] rounded-lg p-6">
+              <div className="bg-[#F2F4F7] rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <Clock className="w-5 h-5 text-[#089DC0]" />
-                  <h3 className="text-xl font-playfair font-bold text-[#1E1E1E]">
+                  <Clock className="w-5 h-5 text-[#1D2B3A]" />
+                  <h3 className="text-xl font-playfair font-bold text-[#1A1D21]">
                     Opening Hours
                   </h3>
                 </div>
                 <ul className="space-y-3">
                   {siteConfig.contact.hours.map((item, index) => (
                     <li key={index} className="flex justify-between text-sm">
-                      <span className="text-[#666666]">{item.day}</span>
-                      <span className="font-medium text-[#1E1E1E]">{item.time}</span>
+                      <span className="text-[#5C6670]">{item.day}</span>
+                      <span className="font-medium text-[#1A1D21]">{item.time}</span>
                     </li>
                   ))}
                 </ul>

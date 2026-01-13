@@ -26,19 +26,19 @@ export default function Welcome() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-padding bg-[#E8F4F8]">
+    <section ref={sectionRef} className="section-padding bg-[#F2F4F7]">
       <div className="container-custom">
         <div className={`text-center max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Accent line */}
           <div className="accent-line-center mb-6" />
 
-          <h2 className="text-2xl md:text-3xl font-playfair font-bold text-[#1E1E1E] mb-8">
+          <h2 className="text-2xl md:text-3xl font-playfair font-bold text-[#1A1D21] mb-8">
             {siteConfig.welcome.heading}
           </h2>
 
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-[#089DC0] text-white px-8 py-4 font-medium text-lg rounded hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="inline-flex items-center justify-center bg-[#1D2B3A] text-white px-8 py-4 font-medium text-lg rounded hover:bg-[#15202C] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             Get In Touch
           </Link>

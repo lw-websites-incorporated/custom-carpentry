@@ -57,12 +57,12 @@ export default function UpdatesPage() {
           <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="accent-line-center mb-6" />
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Instagram className="w-8 h-8 text-[#089DC0]" />
-              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E]">
+              <Instagram className="w-8 h-8 text-[#1D2B3A]" />
+              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1A1D21]">
                 Follow Us on Instagram
               </h2>
             </div>
-            <p className="text-[#666666] max-w-2xl mx-auto">
+            <p className="text-[#5C6670] max-w-2xl mx-auto">
               Stay up to date with our latest projects, behind-the-scenes content, and carpentry inspiration.
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function UpdatesPage() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-[#089DC0]/0 group-hover:bg-[#089DC0]/80 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-[#1D2B3A]/0 group-hover:bg-[#1D2B3A]/80 transition-all duration-300 flex items-center justify-center">
                   <Instagram className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all duration-300" />
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function UpdatesPage() {
               href={siteConfig.updates.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#089DC0] text-white px-8 py-4 rounded font-medium hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="inline-flex items-center gap-3 bg-[#1D2B3A] text-white px-8 py-4 rounded font-medium hover:bg-[#15202C] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <Instagram className="w-5 h-5" />
               Follow {siteConfig.updates.instagramHandle}

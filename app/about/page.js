@@ -40,7 +40,9 @@ export default function AboutPage() {
         title={siteConfig.about.heading}
         image={siteConfig.about.teamPhoto}
         imageAlt="Andy Ford and Rhys Merritt - Custom Carpentry Team"
-        imagePosition="center top"
+        imagePosition="center 0%"
+        imageScale={1}
+        minHeightClass="min-h-[55vh] md:min-h-[70vh]"
       />
 
       {/* Values Section */}
@@ -52,20 +54,20 @@ export default function AboutPage() {
               return (
                 <div
                   key={value.title}
-                  className={`text-center p-8 bg-[#F5F5F5] rounded-lg transition-all duration-700 ${
+                  className={`text-center p-8 bg-[#D6D9DE] rounded-lg transition-all duration-700 ${
                     isVisible
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-10'
                   }`}
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
-                  <div className="w-16 h-16 mx-auto mb-6 bg-[#089DC0] rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-[#1D2B3A] rounded-full flex items-center justify-center">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-playfair font-bold text-[#1E1E1E] mb-3">
+                  <h3 className="text-xl font-playfair font-bold text-[#1A1D21] mb-3">
                     {value.title}
                   </h3>
-                  <p className="text-[#666666] leading-relaxed">
+                  <p className="text-[#5C6670] leading-relaxed">
                     {value.description}
                   </p>
                 </div>
@@ -76,11 +78,11 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="section-padding bg-[#E8F4F8]">
+      <section className="section-padding bg-[#F2F4F7]">
         <div className="container-custom">
           <div className="text-center mb-12">
             <div className="accent-line-center mb-6" />
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E]">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1A1D21]">
               Meet the Team
             </h2>
           </div>
@@ -105,13 +107,13 @@ export default function AboutPage() {
                   {/* Content */}
                   <div className="p-8">
                     <div className="accent-line mb-4" />
-                    <h3 className="text-xl font-playfair font-bold text-[#089DC0] mb-1">
+                    <h3 className="text-xl font-playfair font-bold text-[#1D2B3A] mb-1">
                       {member.role}
                     </h3>
-                    <h4 className="text-2xl font-playfair font-bold text-[#1E1E1E] mb-4">
+                    <h4 className="text-2xl font-playfair font-bold text-[#1A1D21] mb-4">
                       {member.name}
                     </h4>
-                    <div className="text-[#666666] leading-relaxed space-y-4 text-sm">
+                    <div className="text-[#5C6670] leading-relaxed space-y-4 text-sm">
                       {member.bio.split('\n\n').map((paragraph, i) => (
                         <p key={i}>{paragraph}</p>
                       ))}
@@ -127,15 +129,15 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="section-padding bg-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E] mb-4">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1A1D21] mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-lg text-[#666666] mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-[#5C6670] mb-8 max-w-2xl mx-auto">
             Contact us today to discuss your project and receive a free, no-obligation quote.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#089DC0] text-white px-8 py-4 rounded font-medium text-lg hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="inline-flex items-center gap-2 bg-[#1D2B3A] text-white px-8 py-4 rounded font-medium text-lg hover:bg-[#15202C] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             Get in Touch
             <ArrowRight className="w-5 h-5" />

@@ -51,10 +51,10 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-medium transition-colors duration-300 hover:text-[#089DC0] ${
+                  className={`font-medium transition-colors duration-300 hover:text-[#1D2B3A] ${
                     pathname === link.href
-                      ? 'text-[#089DC0]'
-                      : 'text-[#1E1E1E]'
+                      ? 'text-[#1D2B3A]'
+                      : 'text-[#1A1D21]'
                   }`}
                 >
                   {link.label}
@@ -64,7 +64,7 @@ export default function Navigation() {
               {/* CTA Button */}
               <Link
                 href="/contact"
-                className="bg-[#089DC0] text-white px-5 py-2.5 rounded font-medium hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-0.5"
+                className="bg-[#1D2B3A] text-white px-5 py-2.5 rounded font-medium hover:bg-[#15202C] transition-all duration-300 hover:-translate-y-0.5"
               >
                 Get a Quote
               </Link>
@@ -73,7 +73,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 text-[#1E1E1E]"
+              className="lg:hidden p-2 text-[#1A1D21]"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -94,8 +94,8 @@ export default function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block py-3 px-4 rounded font-medium transition-colors duration-300 ${
                     pathname === link.href
-                      ? 'bg-[#E8F4F8] text-[#089DC0]'
-                      : 'text-[#1E1E1E] hover:bg-[#E8F4F8] hover:text-[#089DC0]'
+                      ? 'bg-[#F2F4F7] text-[#1D2B3A]'
+                      : 'text-[#1A1D21] hover:bg-[#F2F4F7] hover:text-[#1D2B3A]'
                   }`}
                 >
                   {link.label}
@@ -104,7 +104,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block text-center bg-[#089DC0] text-white py-3 px-4 rounded font-medium hover:bg-[#067a99] transition-colors duration-300 mt-2"
+                className="block text-center bg-[#1D2B3A] text-white py-3 px-4 rounded font-medium hover:bg-[#15202C] transition-colors duration-300 mt-2"
               >
                 Get a Quote
               </Link>

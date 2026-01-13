@@ -41,10 +41,10 @@ export default function TestimonialsPage() {
         <div className="container-custom">
           <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="accent-line-center mb-6" />
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1E1E1E] mb-4">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1A1D21] mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-[#666666] max-w-2xl mx-auto">
+            <p className="text-[#5C6670] max-w-2xl mx-auto">
               Read reviews from our satisfied customers across North West London and the Chilterns.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function TestimonialsPage() {
             {siteConfig.testimonials.entries.map((testimonial, index) => (
               <div
                 key={index}
-                className={`bg-[#F5F5F5] rounded-lg p-8 relative transition-all duration-700 ${
+                className={`bg-[#D6D9DE] rounded-lg p-8 relative transition-all duration-700 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
@@ -63,7 +63,7 @@ export default function TestimonialsPage() {
               >
                 {/* Quote Icon */}
                 <div className="absolute -top-4 left-8">
-                  <div className="w-10 h-10 bg-[#089DC0] rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#1D2B3A] rounded-full flex items-center justify-center">
                     <Quote className="w-5 h-5 text-white" />
                   </div>
                 </div>
@@ -71,24 +71,24 @@ export default function TestimonialsPage() {
                 {/* Stars */}
                 <div className="flex gap-1 mb-4 mt-2">
                   {[...Array(testimonial.rating || 5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-[#089DC0] fill-[#089DC0]" />
+                    <Star key={i} className="w-5 h-5 text-[#D4AF37] fill-[#D4AF37]" />
                   ))}
                 </div>
 
                 {/* Quote Text */}
-                <blockquote className="text-[#1E1E1E] leading-relaxed mb-6 text-lg">
+                <blockquote className="text-[#1A1D21] leading-relaxed mb-6 text-lg">
                   &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
 
                 {/* Author */}
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-semibold text-[#1E1E1E]">{testimonial.name}</p>
-                    <p className="text-sm text-[#089DC0]">{testimonial.location}</p>
+                    <p className="font-semibold text-[#1A1D21]">{testimonial.name}</p>
+                    <p className="text-sm text-[#1D2B3A]">{testimonial.location}</p>
                   </div>
 
                   {/* Google Badge */}
-                  <div className="flex items-center gap-2 text-sm text-[#666666]">
+                  <div className="flex items-center gap-2 text-sm text-[#5C6670]">
                     <span className="font-medium">Google Reviews</span>
                     <svg className="w-5 h-5" viewBox="0 0 24 24">
                       <path
@@ -120,7 +120,7 @@ export default function TestimonialsPage() {
               href="https://www.google.com/search?q=custom+carpentry+reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#089DC0] text-white px-8 py-4 rounded font-medium hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="inline-flex items-center gap-3 bg-[#1D2B3A] text-white px-8 py-4 rounded font-medium hover:bg-[#15202C] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               See All Our Reviews on Google
               <ExternalLink className="w-5 h-5" />
@@ -130,7 +130,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-[#1E1E1E]">
+      <section className="section-padding bg-[#1A1D21]">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
             Ready to Start Your Project?
@@ -140,7 +140,7 @@ export default function TestimonialsPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#089DC0] text-white px-8 py-4 rounded font-medium text-lg hover:bg-[#067a99] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="inline-flex items-center gap-2 bg-[#1D2B3A] text-white px-8 py-4 rounded font-medium text-lg hover:bg-[#15202C] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             Get In Touch
             <ArrowRight className="w-5 h-5" />

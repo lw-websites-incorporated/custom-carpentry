@@ -61,15 +61,15 @@ export default function ContactForm() {
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle className="w-8 h-8 text-green-600" />
         </div>
-        <h3 className="text-2xl font-playfair font-bold text-[#1E1E1E] mb-2">
+        <h3 className="text-2xl font-playfair font-bold text-[#1A1D21] mb-2">
           Thank You!
         </h3>
-        <p className="text-[#666666] mb-6">
+        <p className="text-[#5C6670] mb-6">
           Your message has been sent successfully. We&apos;ll get back to you soon.
         </p>
         <button
           onClick={() => setIsSubmitted(false)}
-          className="text-[#089DC0] font-medium hover:underline"
+          className="text-[#1D2B3A] font-medium hover:underline"
         >
           Send another message
         </button>
@@ -79,14 +79,14 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white rounded-lg p-8 shadow-lg">
-      <h3 className="text-2xl font-playfair font-bold text-[#1E1E1E] mb-6">
+      <h3 className="text-2xl font-playfair font-bold text-[#1A1D21] mb-6">
         {siteConfig.contact.form.heading}
       </h3>
 
       <div className="space-y-5">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-[#1E1E1E] mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-[#1A1D21] mb-2">
             {siteConfig.contact.form.fields.name.label} <span className="text-red-500">*</span>
           </label>
           <input
@@ -96,7 +96,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder={siteConfig.contact.form.fields.name.placeholder}
-            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#089DC0] transition-all ${
+            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D2B3A] transition-all ${
               errors.name ? 'border-red-500' : 'border-gray-200'
             }`}
           />
@@ -105,7 +105,7 @@ export default function ContactForm() {
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-[#1E1E1E] mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-[#1A1D21] mb-2">
             {siteConfig.contact.form.fields.email.label} <span className="text-red-500">*</span>
           </label>
           <input
@@ -115,7 +115,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder={siteConfig.contact.form.fields.email.placeholder}
-            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#089DC0] transition-all ${
+            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D2B3A] transition-all ${
               errors.email ? 'border-red-500' : 'border-gray-200'
             }`}
           />
@@ -124,7 +124,7 @@ export default function ContactForm() {
 
         {/* Phone */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-[#1E1E1E] mb-2">
+          <label htmlFor="phone" className="block text-sm font-medium text-[#1A1D21] mb-2">
             {siteConfig.contact.form.fields.phone.label}
           </label>
           <input
@@ -134,13 +134,13 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder={siteConfig.contact.form.fields.phone.placeholder}
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#089DC0] transition-all"
+            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D2B3A] transition-all"
           />
         </div>
 
         {/* Service Dropdown */}
         <div>
-          <label htmlFor="service" className="block text-sm font-medium text-[#1E1E1E] mb-2">
+          <label htmlFor="service" className="block text-sm font-medium text-[#1A1D21] mb-2">
             {siteConfig.contact.form.fields.service.label}
           </label>
           <select
@@ -148,7 +148,7 @@ export default function ContactForm() {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#089DC0] transition-all bg-white"
+            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D2B3A] transition-all bg-white"
           >
             <option value="">Select a service...</option>
             {siteConfig.contact.form.fields.service.options.map((option) => (
@@ -161,7 +161,7 @@ export default function ContactForm() {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-[#1E1E1E] mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-[#1A1D21] mb-2">
             {siteConfig.contact.form.fields.message.label} <span className="text-red-500">*</span>
           </label>
           <textarea
@@ -171,7 +171,7 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder={siteConfig.contact.form.fields.message.placeholder}
             rows={5}
-            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#089DC0] transition-all resize-none ${
+            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D2B3A] transition-all resize-none ${
               errors.message ? 'border-red-500' : 'border-gray-200'
             }`}
           />
@@ -182,7 +182,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-[#089DC0] text-white py-4 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-[#067a99] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+          className="w-full bg-[#1D2B3A] text-white py-4 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-[#15202C] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>

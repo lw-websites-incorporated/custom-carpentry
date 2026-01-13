@@ -27,7 +27,7 @@ export default function CTABanner() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-[#089DC0] relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 bg-[#1D2B3A] relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-48 h-48 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2" />
@@ -49,7 +49,7 @@ export default function CTABanner() {
             {/* Phone Button */}
             <a
               href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`}
-              className="inline-flex items-center justify-center gap-3 bg-white text-[#089DC0] px-8 py-4 rounded font-bold text-lg hover:bg-[#E8F4F8] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-3 bg-white text-[#1D2B3A] px-8 py-4 rounded font-bold text-lg hover:bg-[#F2F4F7] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <Phone className="w-6 h-6" />
               <span>{siteConfig.contact.phone}</span>
@@ -58,7 +58,7 @@ export default function CTABanner() {
             {/* Quote Button */}
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-[#1E1E1E] text-white px-8 py-4 rounded font-medium hover:bg-[#333333] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 bg-[#1A1D21] text-white px-8 py-4 rounded font-medium hover:bg-[#13161A] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               {siteConfig.cta.secondaryButtonText}
               <ArrowRight className="w-5 h-5" />
