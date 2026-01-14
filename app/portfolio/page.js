@@ -47,7 +47,7 @@ export default function PortfolioPage() {
               Browse by Category
             </h2>
             <p className="text-[#5C6670] max-w-2xl mx-auto">
-              Click on a category to explore our projects in that area.
+              Click on a category to explore our projects in that area. Thanks.
             </p>
           </div>
 
