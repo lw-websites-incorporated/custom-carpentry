@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import PageHero from '@/components/hero/PageHero';
-import { Users, Award, Shield, ArrowRight } from 'lucide-react';
+import { Users, Award, Shield } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
 
 const iconMap = {
@@ -126,24 +125,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#1A1D21] mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg text-[#5C6670] mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your project and receive a free, no-obligation quote.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-[#1D2B3A] text-white px-8 py-4 rounded font-medium text-lg hover:bg-[#15202C] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-          >
-            Get in Touch
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
     </>
   );
 }
