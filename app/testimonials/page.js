@@ -1,9 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import PageHero from '@/components/hero/PageHero';
-import { Quote, Star, ExternalLink, ArrowRight } from 'lucide-react';
+import { Quote, Star, ExternalLink } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
 
 export default function TestimonialsPage() {
@@ -129,24 +128,6 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-[#1A1D21]">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Join our satisfied customers and experience the Custom Carpentry difference.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-[#1D2B3A] text-white px-8 py-4 rounded font-medium text-lg hover:bg-[#15202C] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-          >
-            Get In Touch
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
     </>
   );
 }

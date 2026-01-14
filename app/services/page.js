@@ -118,24 +118,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-[#1D2B3A]">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
-            Have a Project in Mind?
-          </h2>
-          <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-            Get in touch today to discuss your requirements and receive a free, no-obligation quote.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-[#1D2B3A] px-8 py-4 rounded font-medium text-lg hover:bg-[#F2F4F7] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
     </>
   );
 }
